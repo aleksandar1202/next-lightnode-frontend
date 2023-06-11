@@ -1,0 +1,7 @@
+button.btn {
+	@apply bg-transparent rounded border py-5 px-16 duration-300;
+
+	&.btn-yellow {
+		@apply border-yellow-dark text-yellow-dark hover:text-white hover:bg-yellow-dark;
+	}
+}

@@ -1,0 +1,11 @@
+@use 'sass:math';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'common.scss';
+@import 'globals.scss';
+@import 'themes.scss';
+
+@import 'pages/landing.scss';

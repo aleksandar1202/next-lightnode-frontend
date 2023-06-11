@@ -1,0 +1,6 @@
+// Line Heights
+@for $i from 1 through 20 {
+  .leading-#{$i * 5}p {
+    line-height: #{math.percentage(math.div($i * 5, 100))} !important;
+  }
+}

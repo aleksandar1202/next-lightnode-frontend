@@ -1,0 +1,16 @@
+#lightnode-landing-page {
+	section:first-child {
+		.landing-bg-overlay {
+			background-image: url(/assets/images/gr1.png);
+	    background-position: bottom center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    opacity: 1;
+	    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+		}
+	}
+
+	.heading-title {
+		@apply text-7xl md:text-9xl font-corporate text-gray-light uppercase leading-70p;
+	}
+}
