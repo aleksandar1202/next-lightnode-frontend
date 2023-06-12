@@ -9,6 +9,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -20,3 +21,56 @@ a {
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
 }
+
+.header-navigation {
+  @apply hidden lg:inline-block;
+
+  &.mobile {
+    @apply block lg:block;
+
+    .header-link {
+      @apply block lg:block;
+
+      &:not(:first-child) {
+        @apply mt-6;
+      }
+      &:not(:last-child) {
+        @apply mr-0;
+      }
+    }
+  }
+
+  .header-link {
+    @apply uppercase hover:text-yellow hover:cursor-pointer text-gray tracking-wider;
+
+    &:not(:last-child) {
+      @apply mr-8;
+    }
+  }  
+}
+
+.header-close-drawer {
+  @apply text-3xl text-yellow hover:text-yellow-dark hover:cursor-pointer;
+}
+
+.header-social {
+  .header-open-drawer {
+    @apply text-3xl text-yellow hover:text-yellow-dark hover:cursor-pointer inline-block lg:hidden;
+  }
+
+  &.mobile {
+    @apply block;
+
+    .header-social-icon {
+      @apply text-3xl text-gray hover:text-yellow hover:cursor-pointer inline-block lg:hidden;
+    }
+  }
+
+  .header-social-icon {
+    @apply text-3xl text-gray hover:text-yellow hover:cursor-pointer hidden lg:inline-block;
+
+    &:not(:last-child) {
+      @apply mr-8;
+    } 
+  }
+} 

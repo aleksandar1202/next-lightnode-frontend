@@ -1,10 +1,5 @@
 import Image from 'next/image'
-
-export interface LNRewardArgs {
-  title: string,
-  description: string,
-  imgSrc: string
-}
+import { LNRewardArgs } from 'common/types/landing'
 
 export const LNReward = ({
   title, description, imgSrc

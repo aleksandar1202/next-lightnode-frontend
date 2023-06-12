@@ -3,17 +3,7 @@ import Image from 'next/image'
 import ScrollAnimation from 'react-animate-on-scroll'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
-
-type Side = 'ltr' | 'rtl'
-
-export interface LNSimpleBlogArgs {
-  title: string,
-  description: string,
-  imgSrc: string,
-  btnTitle: string,
-  side: Side,
-  noBorder: boolean
-}
+import { LNSimpleBlogArgs } from 'common/types/landing'
 
 export const LNSimpleBlog = ({
   title, description, btnTitle, side, imgSrc, noBorder
@@ -47,7 +37,7 @@ export const LNSimpleBlog = ({
       <div className={"md:flex-auto md:w-64 p-8 md:p-8 lg:py-44 lg:px-40" + (side === 'rtl' ? " order-1" : "")}>
         <p className="text-2xl uppercase text-gray-light mb-4">{title}</p>
         <p className="text-lg text-gray mb-8">{description}</p>
-        <p className="text-lg text-yellow-dark">
+        <p className="text-lg text-yellow">
           <span ref={btnRef} className="transition hover:cursor-pointer" style={{ animationDuration: '1.5s' }}
              onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
             {btnTitle}

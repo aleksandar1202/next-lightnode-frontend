@@ -1,7 +1,11 @@
 button.btn {
-	@apply bg-transparent rounded border py-5 px-16 duration-300;
+	@apply bg-transparent rounded border duration-300;
 
-	&.btn-yellow {
-		@apply border-yellow-dark text-yellow-dark hover:text-white hover:bg-yellow-dark;
+	&.btn-primary.btn-filled {
+		@apply text-gray-light font-bold hover:text-white bg-yellow-light-dark border-yellow-light-dark hover:bg-yellow-dark hover:border-yellow-dark;
+		@apply focus:ring-slate-200 focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:outline-none;
+	}
+	&.btn-primary.btn-outlined {
+		@apply border-yellow text-yellow hover:text-white hover:bg-yellow;
 	}
 }
