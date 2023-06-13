@@ -9,8 +9,6 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import { faClipboard, faTimes, faBars } from '@fortawesome/free-solid-svg-icons'
 
-
-
 export const AnonymousHeader = () => {
   const [open, setOpen] = useState<boolean>(false)
 
@@ -47,5 +45,11 @@ export const AnonymousHeader = () => {
         <NavSocialItems />
       </div>
     </div>
+  </div>)
+}
+
+export const ClientHeader = () => {
+  return (<div>
+    Client Header Here
   </div>)
 }

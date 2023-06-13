@@ -1,5 +1,5 @@
 {
-  "name": "lightnode-frontend",
+  "name": "lightnodestaking-frontend",
   "private": true,
   "scripts": {
     "dev": "next dev",

@@ -2,6 +2,8 @@ import { MouseEvent } from 'react'
 
 export type ResponsiveSize = 'large' | 'medium' | 'small'
 
+export type LogoVariant = 'vertical' | 'horizontal' | 'solo'
+
 export interface LNInputArgs {
 	size: ResponsiveSize,
 	value: string,

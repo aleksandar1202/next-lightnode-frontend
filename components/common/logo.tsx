@@ -1,14 +1,55 @@
+import { useMemo } from 'react'
 import Image from 'next/image'
-import { ResponsiveSize } from 'common/types/components'
+import { ResponsiveSize, LogoVariant } from 'common/types/components'
 
-const logoSizes = {
+const verticalLogoSizes = {
   large: { width: 200, height: 280 },
   medium: { width: 150, height: 210 },
   small: { width: 50, height: 70 }
 }
 
-export const LNLogo = ({
-  size
-}: { size: ResponsiveSize }) => {
-  return (<Image src="/assets/images/Group-72.png" width={logoSizes[size].width} height={logoSizes[size].height} />)
+const soloLogoSizes = {
+  large: { width: 70, height: 70 },
+  medium: { width: 50, height: 50 },
+  small: { width: 30, height: 30 }
+}
+
+const horitonzalLogoSizes = {
+  large: { width: 209, height: 80 },
+  medium: { width: 154, height: 59 },
+  small: { width: 109, height: 42 }
+}
+
+export const LNLogo = ({ size, variant }: {
+  size: ResponsiveSize,
+  variant: LogoVariant
+}) => {
+  const sizes = useMemo(() => {
+    switch (variant) {
+      case 'horizontal':
+        return horitonzalLogoSizes
+      case 'solo':
+        return soloLogoSizes
+      default:
+        return verticalLogoSizes
+    }
+  }, [variant])
+
+  const styles = useMemo(() => ({
+    width: sizes[size].width,
+    height: sizes[size].height
+  }), [size])
+
+  const srcPath = useMemo(() => {
+    switch (variant) {
+      case 'horizontal':
+        return '/assets/images/Logo-Horizontal.png'
+      case 'solo':
+        return '/assets/images/Logo-120.png'
+      default:
+        return '/assets/images/Logo-Vertical.png'
+    }
+  }, [variant])
+
+  return (<Image src={srcPath} width={styles.width} height={styles.height} />)
 }
