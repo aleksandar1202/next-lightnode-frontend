@@ -53,11 +53,11 @@ a {
   @apply text-3xl text-yellow hover:text-yellow-dark hover:cursor-pointer;
 }
 
-.header-social {
-  .header-open-drawer {
-    @apply text-3xl text-yellow hover:text-yellow-dark hover:cursor-pointer inline-block lg:hidden;
-  }
+.header-open-drawer {
+  @apply text-3xl text-yellow hover:text-yellow-dark hover:cursor-pointer inline-block lg:hidden;
+}
 
+.header-social {
   &.mobile {
     @apply block;
 
@@ -73,4 +73,8 @@ a {
       @apply mr-8;
     } 
   }
-} 
+}
+
+.nav-item-selected {
+  filter: invert(50%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}

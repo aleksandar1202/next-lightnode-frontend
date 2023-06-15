@@ -49,7 +49,7 @@ export const AnonymousHeader = () => {
 }
 
 export const ClientHeader = () => {
-  return (<div>
+  return (<div className="text-white">
     Client Header Here
   </div>)
 }

@@ -7,7 +7,54 @@ const StakingPoolPage: NextPage = () => {
 
   return (<ClientLayout>
     <div id="staking-pool" className="">
-      Staking Pool
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
+      <p className="text-white">Staking Pool</p>
     </div>
   </ClientLayout>)
 }

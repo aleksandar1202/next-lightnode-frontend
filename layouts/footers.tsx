@@ -11,7 +11,7 @@ export const AnonymousFooter = () => {
 }
 
 export const ClientFooter = () => {
-  return (<div>
+  return (<div className="text-white">
     Client Footer Here
   </div>)
 }
