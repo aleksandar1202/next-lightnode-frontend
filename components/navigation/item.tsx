@@ -6,7 +6,7 @@ type RectSize = {
   height: number;
 }
 
-const NavItem = ({ href, title, icon, size, selected }: {
+export const NavItem = ({ href, title, icon, size, selected }: {
   href: string,
   title: string,
   icon: string,
@@ -29,5 +29,3 @@ const NavItem = ({ href, title, icon, size, selected }: {
     </Link>
   </li>)
 }
-
-export default NavItem

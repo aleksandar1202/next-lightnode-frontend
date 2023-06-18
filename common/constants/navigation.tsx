@@ -1,4 +1,6 @@
-export const navigations = [{
+import { NavigationObjectType } from 'common/types/common'
+
+export const navigations: Array<NavigationObjectType> = [{
 	href: "/staking-pool",
 	title: "Staking Pool",
 	icon: '/assets/svgs/Staking.svg',

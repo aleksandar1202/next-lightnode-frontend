@@ -1,13 +1,12 @@
-import { useState, ReactNode } from 'react'
+import { ReactNode } from 'react'
 import Link from 'next/link'
-import { withRouter } from 'next/router'
-import NavContainer from 'components/navigation/container'
-import NavItem from 'components/navigation/item'
+import { useRouter } from 'next/router'
+import { NavContainer } from 'components/navigation/container'
+import { NavItem } from 'components/navigation/item'
 import { navigations } from 'common/constants/navigation'
 
-const NavBar = ({ router }: { router: any }) => {
-  const [visible,setVisible] = useState<boolean>(false)
-
+export const NavBar = () => {
+  const router = useRouter()
   const isSelected = (href: string) => router.pathname.includes(href)
 
   return (<NavContainer>
@@ -18,5 +17,3 @@ const NavBar = ({ router }: { router: any }) => {
     />)}
   </NavContainer>)
 }
-
-export default withRouter(NavBar)

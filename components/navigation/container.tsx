@@ -1,9 +1,7 @@
 import { ReactNode } from 'react'
 
-const NavContainer = ({ children }: {
+export const NavContainer = ({ children }: {
   children: ReactNode
 }) => {
   return (<ul>{children}</ul>)
 }
-
-export default NavContainer

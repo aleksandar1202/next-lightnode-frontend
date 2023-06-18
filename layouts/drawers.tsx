@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { LNLogo } from 'components/common/logo'
-import NavBar from './navbar'
+import { NavBar } from './navbar'
 
 export const ClientDrawer = ({ children }: {
   children: ReactNode
@@ -36,7 +36,7 @@ export const ClientDrawer = ({ children }: {
         <NavBar />
       </div>
     </div>
-    <div className="flex-1 md:ml-64">
+    <div className="flex-1 md:ml-64 px-4">
       {children}
     </div>
   </div>)

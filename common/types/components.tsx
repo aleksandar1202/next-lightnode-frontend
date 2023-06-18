@@ -11,11 +11,11 @@ export interface LNInputArgs {
 	onChange: Function
 }
 
-export type ButtonVariant = 'primary' | 'secondary' | 'warning' | 'info' | 'danger'
+export type StylingVariant = 'primary' | 'secondary' | 'success' | 'warning' | 'info' | 'danger'
 export type ButtonStyle = 'outlined' | 'filled'
 
 export interface LNButtonArgs {
-	variant?: ButtonVariant,
+	variant?: StylingVariant,
 	style?: ButtonStyle,
 	size?: ResponsiveSize,
 	title: string,
