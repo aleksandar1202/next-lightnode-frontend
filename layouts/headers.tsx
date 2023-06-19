@@ -60,13 +60,13 @@ export const ClientHeader = () => {
     return n || { href: '', title: '', icon: '', size: { width: 0, height: 0} }
   }, [router])
 
-  return (<div className="py-10 flex justify-between flex-col md:flex-row">
-    <div className="text-white flex items-center mb-4 md:mb-0">
+  return (<div className="py-10 flex justify-between flex-col-reverse md:flex-row">
+    <div className="text-white flex items-center">
       <img src={navigation.icon} width={navigation.size.width * 1.5}
         height={navigation.size.height * 1.5 || 0} className="mr-4"/>
       <span className="text-4xl">{navigation.title}</span>
     </div>
-    <div className="flex items-center justify-between md:justify-end pr-4">
+    <div className="flex items-center justify-between md:justify-end pr-4 mb-6 md:mb-0">
       <LNButton style="outlined" title="Connect Wallet" className="mr-6"/>
       <LNBadge text="2">
         <FontAwesomeIcon className="text-white text-2xl hover:text-yellow hover:cursor-pointer duration-300" icon={faBell} />

@@ -11,7 +11,7 @@ export const ClientDrawer = ({ children }: {
   const [visible, setVisible] = useState<boolean | null>(null)
 
   const mobileDropdownStyles = useMemo(() => {
-    const defaultStyle = 'w-screen bg-blue-dark left-0 text-right p-8 md:hidden animated fixed'
+    const defaultStyle = 'w-screen bg-blue-dark left-0 text-right p-8 md:hidden animated fixed z-30'
     return visible ? `${defaultStyle} block slideInRight` :
       (visible === false ? `${defaultStyle} block slideOutRight` : `${defaultStyle} hidden`)
   }, [visible])
