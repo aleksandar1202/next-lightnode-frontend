@@ -26,7 +26,15 @@ module.exports = {
         'black-opacity-60': 'rgba(0, 0, 0, 0.6)',
         'black-opacity-70': 'rgba(0, 0, 0, 0.7)',
         'black-opacity-80': 'rgba(0, 0, 0, 0.8)',
-        'black-opacity-90': 'rgba(0, 0, 0, 0.9)'
+        'black-opacity-90': 'rgba(0, 0, 0, 0.9)',
+        'white-opacity-20': 'rgba(255, 255, 255, 0.2)',
+        'white-opacity-30': 'rgba(255, 255, 255, 0.3)',
+        'white-opacity-40': 'rgba(255, 255, 255, 0.4)',
+        'white-opacity-50': 'rgba(255, 255, 255, 0.5)',
+        'white-opacity-60': 'rgba(255, 255, 255, 0.6)',
+        'white-opacity-70': 'rgba(255, 255, 255, 0.7)',
+        'white-opacity-80': 'rgba(255, 255, 255, 0.8)',
+        'white-opacity-90': 'rgba(255, 255, 255, 0.9)'
       },
       fontFamily: {
         corporate: ['Corporate', 'sans-serif'],
