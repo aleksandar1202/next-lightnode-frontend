@@ -8,9 +8,11 @@ import {
 } from 'recharts';
 import { ClientLayout } from 'layouts/client'
 import { LNCard } from 'components/common/card'
+import { LNInput } from 'components/common/input'
 import { LNProgress } from 'components/common/progress'
 import { LNChartTooltip } from 'components/charts/customToolTip'
-import { LNSwitchButton } from 'components/common/button'
+import { LNCheckBox } from 'components/common/checkbox'
+import { LNButton, LNSwitchButton } from 'components/common/button'
 
 const data = [
   { name: 'Jan', uv: 0, pv: 170 },
@@ -30,6 +32,8 @@ const data = [
 const StakingPoolPage: NextPage = () => {
   const [text, setText] = useState('')
   const [type, setType] = useState('Deposit')
+  const [amount, setAmount] = useState('')
+  const [permission, setPermission] = useState(false)
 
   const onChangeType = (isPositive: boolean) => {
     if (isPositive) {
@@ -40,11 +44,11 @@ const StakingPoolPage: NextPage = () => {
   }
 
   useEffect(() => {
-    console.log(type)
-  }, [type])
+    console.log(type, permission)
+  }, [permission, type])
 
   return (<ClientLayout>
-    <div id="staking-pool" className="">
+    <div id="staking-pool">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
         <LNCard title="APY">
           <p className="text-6xl mt-4 mb-2">45%</p>
@@ -130,12 +134,24 @@ const StakingPoolPage: NextPage = () => {
       </div>
       <div className="">
         <LNCard>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <div>
-              <LNSwitchButton pos="Deposit" neg="Compound" onChange={onChangeType}/>
+          <div className="grid grid-cols-1 lg:grid-cols-10 gap-4">
+            <div className="lg:col-span-3">
+              <LNSwitchButton pos="Deposit" neg="Compound" onChange={onChangeType} className="h-full"/>
             </div>
-            <div className="md:col-span-2">Input box</div>
-            <div>Confirm</div>
+            <div className="lg:col-span-5 flex items-center">
+              <img src="/assets/svgs/ETH.svg" className="mr-2 w-6"/>
+              <LNInput size="large" className="grow" value={amount}
+                suffix="You will receive: 0.00 stETH"
+                onChange={(v: string) => setAmount(v)} placeHolder="Enter amount"/>
+            </div>
+            <div className="flex items-center lg:col-span-2">
+              <LNButton title="Confirm" className="w-full uppercase"/>
+            </div>
+          </div>
+          <div className="flex justify-center mt-6 mb-2">
+            <LNCheckBox onChange={setPermission} className="text-gray">
+              <span>I agree to <a href="" className="text-yellow underline">terms and conditions</a></span>
+            </LNCheckBox>
           </div>
         </LNCard>
       </div>

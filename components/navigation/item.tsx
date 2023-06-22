@@ -13,7 +13,7 @@ export const NavItem = ({ href, title, icon, size, selected }: {
   size: RectSize,
   selected: boolean
 }) => {
-  const containerStyles = useMemo(() => "p-4 rounded-2xl text-white" + (selected ? " bg-blue-light animated fadeIn" : ""), [selected])
+  const containerStyles = useMemo(() => "p-4 rounded text-white" + (selected ? " bg-blue-light animated fadeIn" : ""), [selected])
   const svgStyles = useMemo(() => {
     return selected ? "" : "nav-item-selected"
   }, [selected])

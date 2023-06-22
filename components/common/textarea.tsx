@@ -7,11 +7,11 @@ export const LNTextArea = ({
   const responsiveClasses = useMemo(() => {
     switch(size) {
       case 'large':
-        return ' py-3 px-6 text-2xl'
+        return ' py-2.5 px-5 text-xl'
       case 'small':
         return ' py-1 px-2 text-base'
       default:
-        return ' py-1.5 px-3.5 text-xl'
+        return ' py-1.5 px-3.5 text-lg'
     }
   }, [size])
 

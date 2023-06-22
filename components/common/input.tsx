@@ -2,19 +2,29 @@ import { useMemo } from 'react'
 import { LNInputArgs } from 'common/types/components'
 
 export const LNInput = ({
-  size, value, placeHolder, onChange
+  size = 'medium', value, placeHolder = '', onChange, className, prefix, suffix
 }: LNInputArgs) => {
-  const responsiveClasses = useMemo(() => {
+  const classes = useMemo(() => {
+    let responsiveClasses = ''
     switch(size) {
       case 'large':
-        return ' py-3 px-6 text-2xl'
+        responsiveClasses = 'py-2.5 px-5 text-xl'
+        break
       case 'small':
-        return ' py-1 px-2 text-base'
+        responsiveClasses = 'py-1 px-2 text-base'
+        break
       default:
-        return ' py-1.5 px-3.5 text-xl'
+        responsiveClasses = 'py-1.5 px-3.5 text-lg'
+        break
     }
-  }, [size])
+    return `border rounded border-gray ${responsiveClasses} ${className} flex items-center`
+  }, [size, className])
 
-  return (<input className={"bg-transparent border rounded border-gray text-gray-light font-light focus:outline-0" + responsiveClasses}
-    placeholder={placeHolder} value={value} onChange={event => onChange(event.target.value)} />)
+  const inputClasses = 'bg-transparent text-gray-light font-light focus:outline-0 grow'
+
+  return (<div className={classes}>
+    {prefix ? <span className="mr-2 text-sm">{prefix}</span> : null}
+    <input className={inputClasses} placeholder={placeHolder} value={value} onChange={event => onChange(event.target.value)} />
+    {suffix ? <span className="ml-2 text-sm">{suffix}</span> : null}
+  </div>)
 }

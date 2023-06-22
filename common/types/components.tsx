@@ -5,10 +5,13 @@ export type ResponsiveSize = 'large' | 'medium' | 'small'
 export type LogoVariant = 'vertical' | 'horizontal' | 'solo'
 
 export interface LNInputArgs {
-	size: ResponsiveSize,
+	size?: ResponsiveSize,
 	value: string,
-	placeHolder: string,
-	onChange: Function
+	placeHolder?: string,
+	onChange: Function,
+	className?: string,
+	suffix?: string,
+	prefix?: string
 }
 
 export type StylingVariant = 'primary' | 'secondary' | 'success' | 'warning' | 'info' | 'danger'

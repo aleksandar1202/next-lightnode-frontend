@@ -67,7 +67,7 @@ export const ClientHeader = () => {
       <span className="text-4xl">{navigation.title}</span>
     </div>
     <div className="flex items-center justify-between md:justify-end pr-4 mb-6 md:mb-0">
-      <LNButton style="outlined" title="Connect Wallet" className="mr-6"/>
+      <LNButton style="outlined" title="Connect Wallet" className="mr-6 uppercase"/>
       <LNBadge text="2">
         <FontAwesomeIcon className="text-white text-2xl hover:text-yellow hover:cursor-pointer duration-300" icon={faBell} />
       </LNBadge>

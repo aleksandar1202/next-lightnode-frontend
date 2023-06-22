@@ -9,7 +9,7 @@ export const LNButton = ({
     const styleClassName = `btn-${style}`
     const sizeClassName = size === 'large' ? 'py-5 px-16' : (size === 'small' ? 'py-1.5 px-4' : 'py-3 px-8')
     
-    return `uppercase btn ${variantClassName} ${styleClassName} ${sizeClassName} ${className}`
+    return `btn ${variantClassName} ${styleClassName} ${sizeClassName} ${className}`
   }, [className, size, style, variant])
 
   const onClickHandler = (event: MouseEvent<HTMLButtonElement>): void => {
@@ -20,8 +20,8 @@ export const LNButton = ({
   return (<button className={classNames} onClick={onClickHandler}>{title}</button>)
 }
 
-export const LNSwitchButton = ({ pos, neg, onChange }: {
-  pos: string, neg: string, onChange: Function
+export const LNSwitchButton = ({ pos, neg, onChange, className }: {
+  pos: string, neg: string, onChange: Function, className: string
 }) => {
   const [isPositive, setIsPositive] = useState(true)
 
@@ -30,9 +30,9 @@ export const LNSwitchButton = ({ pos, neg, onChange }: {
   }, [isPositive])
 
   return <Fragment>
-    <button className={`w-3/6 py-4 ${isPositive ? "bg-black cursor-not-allowed" : "bg-gray"} rounded-l-xl`}
+    <button className={`w-3/6 py-3 ${isPositive ? "bg-gray cursor-not-allowed" : "bg-black"} rounded-l ${className}`}
       onClick={() => setIsPositive(true)}>{pos}</button>
-    <button className={`w-3/6 py-4 ${!isPositive ? "bg-black cursor-not-allowed" : "bg-gray"} rounded-r-xl`}
+    <button className={`w-3/6 py-3 ${!isPositive ? "bg-gray cursor-not-allowed" : "bg-black"} rounded-r ${className}`}
       onClick={() => setIsPositive(false)}>{neg}</button>
   </Fragment>
 }

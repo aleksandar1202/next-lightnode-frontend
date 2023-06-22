@@ -35,6 +35,6 @@ export const LNContactUsForm = () => {
     <div className="grid grid-cols-1 mt-8">
       <LNTextArea size="large" value={form.message} onChange={(v: string) => onChangeField('message', v)} placeHolder="Message"/>
     </div>
-    <LNButton size="large" style="filled" title="Send message" className="mt-8" onClick={onSubmit}/>
+    <LNButton size="large" style="filled" title="Send message" className="mt-8 uppercase" onClick={onSubmit}/>
   </form>)
 }

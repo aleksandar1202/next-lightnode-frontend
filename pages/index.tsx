@@ -36,7 +36,7 @@ const LandingPage: NextPage = () => {
         <p className="relative text-2xl md:text-3xl uppercase text-yellow font-light mb-16 md:mb-20">
           Make stake happen
         </p>
-        <LNButton size="large" style="outlined" title="Start staking" className="relative" onClick={() => navigateTo('staking-pool')}/>
+        <LNButton size="large" style="outlined" title="Start staking" className="relative uppercase" onClick={() => navigateTo('staking-pool')}/>
       </section>
       <section id="about" className="text-center max-w-7xl mx-auto px-6">
         <p className="uppercase text-gray-light text-xl pt-24 mb-6">Rewards / Benefits</p>
