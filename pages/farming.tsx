@@ -1,8 +1,18 @@
 import { useState } from 'react'
 import type { NextPage } from 'next'
+import Image from 'next/image'
 import { ClientLayout } from 'layouts/client'
 import { LNCard } from 'components/common/card'
 import { LNProgress } from 'components/common/progress'
+import { LNFarmingPoolCard } from 'components/cards/farmingPool'
+
+const poolData = [
+  { key: 'Pool Apy', value: '15.4%' },
+  { key: 'Your Liquidity', value: '$12,000' },
+  { key: 'Active Liquidity', value: '5%' },
+  { key: 'Earned Rewards', value: '$200' },
+  { key: 'Earned Feeds', value: '$150' }
+]
 
 const FarmingPage: NextPage = () => {
   const [text, setText] = useState('');
@@ -16,7 +26,7 @@ const FarmingPage: NextPage = () => {
         </LNCard>
         <LNCard title="Your Rewards" variant="success">
           <p className="flex items-center text-2xl mt-4 mb-2">
-            <img src="/assets/svgs/ETH.svg" />
+            <Image width={20} height={30} src="/assets/svgs/ETH.svg" alt="ETH"/>
             <span className="ml-2">1 - $4,000</span>
           </p>
           <p className="mb-2">Next reward cycle: 18h 22m 10s</p>
@@ -24,7 +34,7 @@ const FarmingPage: NextPage = () => {
         </LNCard>
         <LNCard title="Your Stake" variant="primary">
           <p className="flex items-center text-2xl mt-4 mb-2">
-            <img src="/assets/svgs/ETH.svg" />
+            <Image width={20} height={30} src="/assets/svgs/ETH.svg" alt="ETH"/>
             <span className="ml-2">32 - $112,000</span>
           </p>
           <p className="mb-2">Next reward cycle: 18h 22m 10s</p>
@@ -37,6 +47,13 @@ const FarmingPage: NextPage = () => {
           <p className="mb-2">Progress - 95%</p>
           <LNProgress variant="danger" percentage={30} />
         </LNCard>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
+        <LNFarmingPoolCard title="Uniswap v3 ETH - sETH Pool" data={poolData} />
+        <LNFarmingPoolCard title="Uniswap v3 ETH - sETH Pool" data={poolData} />
+        <LNFarmingPoolCard title="Uniswap v3 ETH - sETH Pool" data={poolData} />
+        <LNFarmingPoolCard title="Uniswap v3 ETH - sETH Pool" data={poolData} />
+        <LNFarmingPoolCard title="Uniswap v3 ETH - sETH Pool" data={poolData} />
       </div>
     </div>
   </ClientLayout>)

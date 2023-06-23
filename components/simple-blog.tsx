@@ -31,7 +31,7 @@ export const LNSimpleBlog = ({
   return (<div className={"relative w-full md:flex py-12" + ephemaral.before}>
       <div className={"md:flex-auto md:w-32 overflow-hidden" + (side === 'rtl' ? " order-2" : "")}>
         <ScrollAnimation animateIn={ephemaral.in} animateOut={ephemaral.out}>
-          <Image src={imgSrc} width={700} height={700}/>
+          <Image src={imgSrc} width={700} height={700} alt="Blog Image"/>
         </ScrollAnimation>
       </div>
       <div className={"md:flex-auto md:w-64 p-8 md:p-8 lg:py-44 lg:px-40" + (side === 'rtl' ? " order-1" : "")}>

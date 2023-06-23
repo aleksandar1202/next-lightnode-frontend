@@ -27,7 +27,7 @@ export const LNSwitchButton = ({ pos, neg, onChange, className }: {
 
   useEffect(() => {
     onChange(isPositive)
-  }, [isPositive])
+  }, [isPositive, onChange])
 
   return <Fragment>
     <button className={`w-3/6 py-3 ${isPositive ? "bg-gray cursor-not-allowed" : "bg-black"} rounded-l ${className}`}

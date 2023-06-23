@@ -1,4 +1,5 @@
 import { useMemo, ReactNode } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 
 type RectSize = {
@@ -22,7 +23,7 @@ export const NavItem = ({ href, title, icon, size, selected }: {
     <Link href={href}>
     <a className="flex items-center">
       <div className="flex justify-center w-8">
-        <img src={icon} width={size.width} height={size.height} className={svgStyles}/>
+        <Image src={icon} width={size.width} height={size.height} className={svgStyles} alt="Nav Icon"/>
       </div>
       <span className="ml-5">{title}</span>
     </a>

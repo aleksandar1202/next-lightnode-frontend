@@ -38,7 +38,7 @@ export const LNLogo = ({ size, variant }: {
   const styles = useMemo(() => ({
     width: sizes[size].width,
     height: sizes[size].height
-  }), [size])
+  }), [size, sizes])
 
   const srcPath = useMemo(() => {
     switch (variant) {
@@ -51,5 +51,5 @@ export const LNLogo = ({ size, variant }: {
     }
   }, [variant])
 
-  return (<Image src={srcPath} width={styles.width} height={styles.height} />)
+  return (<Image src={srcPath} width={styles.width} height={styles.height} alt="LightNode Logo"/>)
 }

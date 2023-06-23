@@ -25,3 +25,5 @@ export interface LNButtonArgs {
 	onClick?: Function,
 	className?: string
 }
+
+export type PositionVariant = 'left' | 'center' | 'right'

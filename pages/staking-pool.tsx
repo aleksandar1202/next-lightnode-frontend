@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import type { NextPage } from 'next'
+import Image from 'next/image'
 import {
   ResponsiveContainer,
   ComposedChart, Area, Line,
@@ -56,7 +57,7 @@ const StakingPoolPage: NextPage = () => {
         </LNCard>
         <LNCard title="Your Rewards" variant="success">
           <p className="flex items-center text-2xl mt-4 mb-2">
-            <img src="/assets/svgs/ETH.svg" />
+            <Image width={20} height={30} src="/assets/svgs/ETH.svg" alt="ETH"/>
             <span className="ml-2">1 - $4,000</span>
           </p>
           <p className="mb-2">Next reward cycle: 18h 22m 10s</p>
@@ -64,7 +65,7 @@ const StakingPoolPage: NextPage = () => {
         </LNCard>
         <LNCard title="Your Stake" variant="primary">
           <p className="flex items-center text-2xl mt-4 mb-2">
-            <img src="/assets/svgs/ETH.svg" />
+            <Image width={20} height={30} src="/assets/svgs/ETH.svg" alt="ETH"/>
             <span className="ml-2">32 - $112,000</span>
           </p>
           <p className="mb-2">Next reward cycle: 18h 22m 10s</p>
@@ -139,13 +140,13 @@ const StakingPoolPage: NextPage = () => {
               <LNSwitchButton pos="Deposit" neg="Compound" onChange={onChangeType} className="h-full"/>
             </div>
             <div className="lg:col-span-5 flex items-center">
-              <img src="/assets/svgs/ETH.svg" className="mr-2 w-6"/>
-              <LNInput size="large" className="grow" value={amount}
+              <Image width={20} height={30} src="/assets/svgs/ETH.svg" className="w-6" alt="ETH"/>
+              <LNInput size="large" className="ml-4 grow" value={amount}
                 suffix="You will receive: 0.00 stETH"
                 onChange={(v: string) => setAmount(v)} placeHolder="Enter amount"/>
             </div>
             <div className="flex items-center lg:col-span-2">
-              <LNButton title="Confirm" className="w-full uppercase"/>
+              <LNButton title="Confirm" className="w-full"/>
             </div>
           </div>
           <div className="flex justify-center mt-6 mb-2">

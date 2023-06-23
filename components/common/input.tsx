@@ -20,7 +20,7 @@ export const LNInput = ({
     return `border rounded border-gray ${responsiveClasses} ${className} flex items-center`
   }, [size, className])
 
-  const inputClasses = 'bg-transparent text-gray-light font-light focus:outline-0 grow'
+  const inputClasses = 'bg-transparent text-gray-light font-light focus:outline-0 grow w-1'
 
   return (<div className={classes}>
     {prefix ? <span className="mr-2 text-sm">{prefix}</span> : null}
