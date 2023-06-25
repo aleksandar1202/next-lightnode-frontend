@@ -11,13 +11,13 @@ export const ClientDrawer = ({ children }: {
   const [visible, setVisible] = useState<boolean | null>(null)
 
   const mobileDropdownStyles = useMemo(() => {
-    const defaultStyle = 'w-screen bg-blue-dark left-0 text-right p-8 md:hidden animated fixed z-30'
+    const defaultStyle = 'w-screen bg-blue-800 left-0 text-right p-8 md:hidden animated fixed z-30'
     return visible ? `${defaultStyle} block slideInRight` :
       (visible === false ? `${defaultStyle} block slideOutRight` : `${defaultStyle} hidden`)
   }, [visible])
 
   return (<div className="relative flex overflow-hidden flex-col md:flex-row">
-    <div className="w-64 bg-blue-dark h-screen fixed left-0 top-0 hidden md:block flex-none p-8">
+    <div className="w-64 bg-blue-800 h-screen fixed left-0 top-0 hidden md:block flex-none p-8">
       <Link href="/">
         <a><LNLogo size="medium" variant="horizontal"/></a>
       </Link>

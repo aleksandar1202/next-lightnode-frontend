@@ -8,7 +8,7 @@ import { LNReward } from 'components/reward'
 import { LNSimpleBlog } from 'components/simple-blog'
 import { LNContactUsForm } from 'components/forms/contact-us'
 import { LNRewardArgs, LNSimpleBlogArgs, LNValidatorArgs } from 'common/types/landing'
-import { ARR_REWARDS, ARR_BLOGS, ARR_VALIDATORS } from 'common/constants/landing'
+import { ARR_REWARDS, ARR_BLOGS, ARR_VALIDATORS } from 'common/constants/ui'
 import { AnonymousLayout } from 'layouts/anonymous'
 
 const LandingPage: NextPage = () => {

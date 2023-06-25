@@ -49,7 +49,7 @@ const StakingPoolPage: NextPage = () => {
   }, [permission, type])
 
   return (<ClientLayout>
-    <div id="staking-pool">
+    <div id="staking-pool" className="pb-4">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
         <LNCard title="APY">
           <p className="text-6xl mt-4 mb-2">45%</p>
@@ -86,7 +86,7 @@ const StakingPoolPage: NextPage = () => {
             <span>(7.5% Staking Fee)</span>
           </p>
           <ResponsiveContainer width="100%" height={350}>
-            <ComposedChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+            <ComposedChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
               <defs>
                 <linearGradient id="colorUv1" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="5%" stopColor="#daaf41" stopOpacity={0.5}/>
@@ -113,7 +113,7 @@ const StakingPoolPage: NextPage = () => {
             <span className="text-xl">Monthly Profits</span>
           </p>
           <ResponsiveContainer width="100%" height={350}>
-            <ComposedChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+            <ComposedChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
               <defs>
                 <linearGradient id="colorUv2" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="5%" stopColor="#1fb6ff" stopOpacity={0.5}/>
@@ -128,12 +128,12 @@ const StakingPoolPage: NextPage = () => {
             </ComposedChart>
           </ResponsiveContainer>
           <div className="flex ml-12 mt-10 mb-6 items-center">
-            <div className="w-6 h-6 bg-blue rounded-full mr-2"></div>
+            <div className="w-6 h-6 bg-blue-500 rounded-full mr-2"></div>
             <span>Monthly Profits</span>
           </div>
         </LNCard>
       </div>
-      <div className="">
+      <div>
         <LNCard>
           <div className="grid grid-cols-1 lg:grid-cols-10 gap-4">
             <div className="lg:col-span-3">

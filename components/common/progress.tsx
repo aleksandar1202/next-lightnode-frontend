@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { StylingVariant, ResponsiveSize } from 'common/types/components'
-import { ThemeVariantToColor } from 'common/constants/ui-theme'
+import { ThemeVariantToColor } from 'common/constants/ui'
 
 const heights = {
   'large': 10,

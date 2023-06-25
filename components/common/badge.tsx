@@ -11,16 +11,16 @@ export const LNBadge = ({ variant = 'primary', text, children }: {
       'w-5 h-5 flex items-center justify-center hover:cursor-pointer'
     switch (variant) {
       case 'secondary':
-        return defaultStyle + ' text-blue-dark bg-yellow'
+        return defaultStyle + ' text-blue-800 bg-yellow'
       case 'warning':
-        return defaultStyle + ' text-blue-dark bg-yellow'
+        return defaultStyle + ' text-blue-800 bg-yellow'
       case 'danger':
-        return defaultStyle + ' text-blue-dark bg-yellow'
+        return defaultStyle + ' text-blue-800 bg-yellow'
       case 'info':
-        return defaultStyle + ' text-blue-dark bg-yellow'
+        return defaultStyle + ' text-blue-800 bg-yellow'
       case 'primary':
       default:
-        return defaultStyle + ' text-blue-dark bg-yellow'
+        return defaultStyle + ' text-blue-800 bg-yellow'
     }
   }, [variant])
   return (<div className="relative">

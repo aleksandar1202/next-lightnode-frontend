@@ -7,6 +7,20 @@ import { LNProgress } from 'components/common/progress'
 import { LNCheckBox } from 'components/common/checkbox'
 import { LNInput } from 'components/common/input'
 import { LNButton } from 'components/common/button'
+import { LNFarmingPoolTable } from 'components/tables/farmingPool'
+import { Mapping } from 'common/types/common'
+
+const tableData: Array<Mapping> = [
+  { balance: 1000, apy: 56, duration: new Date(1992, 1, 20, 1, 1, 1), status: true },
+  { balance: 1350, apy: 43, duration: new Date(1966, 11, 21, 2, 2, 2), status: false },
+  { balance: 2200, apy: 62, duration: new Date(1990, 11, 9, 3, 3, 3), status: false },
+  { balance: 5300, apy: 81, duration: new Date(1992, 0, 14, 4, 4, 4), status: true },
+  { balance: 1900, apy: 49, duration: new Date(1994, 2, 15, 5, 5, 5), status: true },
+  { balance: 1350, apy: 43, duration: new Date(1966, 11, 21, 2, 2, 2), status: false },
+  { balance: 2200, apy: 62, duration: new Date(1990, 11, 9, 3, 3, 3), status: false },
+  { balance: 5300, apy: 81, duration: new Date(1992, 0, 14, 4, 4, 4), status: true },
+  { balance: 1900, apy: 49, duration: new Date(1994, 2, 15, 5, 5, 5), status: true }
+]
 
 const SoloStakingPage: NextPage = () => {
   const [amount, setAmount] = useState('')
@@ -15,7 +29,7 @@ const SoloStakingPage: NextPage = () => {
   const [permission, setPermission] = useState(false)
 
   return <ClientLayout>
-    <div id="solo-staking">
+    <div id="solo-staking" className="pb-4">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
         <LNCard title="APY">
           <p className="text-6xl mt-4 mb-2">45%</p>
@@ -74,7 +88,7 @@ const SoloStakingPage: NextPage = () => {
       <div className="grid grid-cols-1 ">
         <LNCard title="Your Validators" titlePos="left">
           <div className="mt-4">
-            table
+            <LNFarmingPoolTable data={tableData}/>
           </div>
         </LNCard>
       </div>

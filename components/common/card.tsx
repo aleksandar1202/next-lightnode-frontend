@@ -1,6 +1,6 @@
 import { ReactNode, useMemo } from 'react'
 import { PositionVariant, StylingVariant } from 'common/types/components'
-import { ThemeVariantToColor } from 'common/constants/ui-theme'
+import { ThemeVariantToColor } from 'common/constants/ui'
 
 export const LNCard = ({
   title = '', titlePos = 'right', variant = null, children

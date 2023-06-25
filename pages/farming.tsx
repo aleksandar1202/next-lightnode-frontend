@@ -18,7 +18,7 @@ const FarmingPage: NextPage = () => {
   const [text, setText] = useState('');
 
   return (<ClientLayout>
-    <div id="farming">
+    <div id="farming" className="pb-4">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
         <LNCard title="APY">
           <p className="text-6xl mt-4 mb-2">45%</p>
