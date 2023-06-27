@@ -36,7 +36,7 @@ export const ClientDrawer = ({ children }: {
         <NavBar />
       </div>
     </div>
-    <div className="flex-1 md:ml-64 px-4">
+    <div className="flex-1 md:ml-64 px-4 min-h-screen">
       {children}
     </div>
   </div>)

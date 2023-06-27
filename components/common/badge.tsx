@@ -25,6 +25,6 @@ export const LNBadge = ({ variant = 'primary', text, children }: {
   }, [variant])
   return (<div className="relative">
     {children}
-    <span className={styles}>{text}</span>
+    {!!text ? <span className={styles}>{text}</span> : null}
   </div>)
 }

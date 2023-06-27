@@ -61,7 +61,7 @@ const StakingPoolPage: NextPage = () => {
             <span className="ml-2">1 - $4,000</span>
           </p>
           <p className="mb-2">Next reward cycle: 18h 22m 10s</p>
-          <LNProgress variant="success" percentage={70} />
+          <LNProgress animation={true} variant="success" percentage={70} />
         </LNCard>
         <LNCard title="Your Stake" variant="primary">
           <p className="flex items-center text-2xl mt-4 mb-2">
@@ -69,23 +69,23 @@ const StakingPoolPage: NextPage = () => {
             <span className="ml-2">32 - $112,000</span>
           </p>
           <p className="mb-2">Next reward cycle: 18h 22m 10s</p>
-          <LNProgress percentage={80} />
+          <LNProgress animation={true} percentage={80} />
         </LNCard>
         <LNCard title="Monthly Profits" variant="danger">
           <p className="text-2xl mt-4 mb-2">
             $35,996
           </p>
           <p className="mb-2">Progress - 95%</p>
-          <LNProgress variant="danger" percentage={30} />
+          <LNProgress animation={true} variant="danger" percentage={30} />
         </LNCard>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
         <LNCard>
-          <p className="flex justify-between px-4 my-8">
+          <p className="flex justify-between px-4 my-6">
             <span className="text-xl">Staking Pool</span>
             <span>(7.5% Staking Fee)</span>
           </p>
-          <ResponsiveContainer width="100%" height={350}>
+          <ResponsiveContainer width="100%" height={250}>
             <ComposedChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
               <defs>
                 <linearGradient id="colorUv1" x1="0" y1="0" x2="0" y2="1">
@@ -101,7 +101,7 @@ const StakingPoolPage: NextPage = () => {
               <Line type="monotone" dataKey="pv" stroke="#8492a6" dot={false}/>
             </ComposedChart>
           </ResponsiveContainer>
-          <div className="flex ml-12 mt-10 mb-6 items-center">
+          <div className="flex ml-12 mt-8 mb-4 items-center">
             <div className="w-6 h-6 bg-yellow rounded-full mr-2"></div>
             <span>Sales: 30,000 ETH</span>
             <div className="w-6 h-6 bg-gray rounded-full ml-8 mr-2"></div>
@@ -109,10 +109,10 @@ const StakingPoolPage: NextPage = () => {
           </div>
         </LNCard>
         <LNCard>
-          <p className="flex justify-between px-4 my-8">
+          <p className="flex justify-between px-4 my-6">
             <span className="text-xl">Monthly Profits</span>
           </p>
-          <ResponsiveContainer width="100%" height={350}>
+          <ResponsiveContainer width="100%" height={250}>
             <ComposedChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
               <defs>
                 <linearGradient id="colorUv2" x1="0" y1="0" x2="0" y2="1">
@@ -127,7 +127,7 @@ const StakingPoolPage: NextPage = () => {
               <Area type="monotone" dataKey="uv" stroke="#1fb6ff" fillOpacity={1} fill="url(#colorUv2)" />
             </ComposedChart>
           </ResponsiveContainer>
-          <div className="flex ml-12 mt-10 mb-6 items-center">
+          <div className="flex ml-12 mt-8 mb-4 items-center">
             <div className="w-6 h-6 bg-blue-500 rounded-full mr-2"></div>
             <span>Monthly Profits</span>
           </div>

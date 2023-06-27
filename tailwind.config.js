@@ -65,6 +65,15 @@ module.exports = {
         '300': '300px',
         '400': '400px',
         '500': '500px'
+      },
+      keyframes: {
+        'grow-up': {
+          '0%': { width: 0 },
+          '100%': { width: '100%' }
+        }
+      },
+      animation: {
+        'grow-up': 'grow-up 1s ease-in-out'
       }
     }
   },
