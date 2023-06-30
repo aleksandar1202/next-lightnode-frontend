@@ -1,5 +1,6 @@
 import { useState, Fragment, useMemo } from 'react'
 import { useRouter } from 'next/router'
+import { useWeb3React } from "@web3-react/core"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faReddit,
@@ -15,6 +16,7 @@ import { LNButton } from 'components/common/button'
 import { LNModal } from 'components/common/modal'
 import { NavigationObjectType } from 'common/types/common'
 import { WalletTypes } from 'common/constants/ui'
+import { Metamask } from "common/web3/connectors"
 
 export const AnonymousHeader = () => {
   const [open, setOpen] = useState<boolean>(false)
@@ -56,6 +58,8 @@ export const AnonymousHeader = () => {
 }
 
 export const ClientHeader = () => {
+  const { active, account, library, connector, activate, deactivate } = useWeb3React()
+  const [wallet, setWallet] = useState<any>(null)
   const [isConnectModalOpen, setIsConnectModalOpen] = useState(false)
   const router = useRouter()
 
@@ -64,8 +68,36 @@ export const ClientHeader = () => {
     return n || { href: '', title: '', icon: '', size: { width: 0, height: 0} }
   }, [router])
 
-  const onConnectWalletClicked = (wallet: string) => {
-    console.log('Connecting Wallet:', wallet)
+  const onConnectWalletClicked = async (walletName: string) => {
+    if (walletName === 'Metamask') {
+      setWallet(Metamask)
+    } else {
+      setWallet(null)
+    }
+    activateWallet()
+    setIsConnectModalOpen(false)
+  }
+
+  const onActivateWalletClicked = () => {
+    setIsConnectModalOpen(true)
+  }
+
+  const activateWallet = async () => {
+    if (wallet) {
+      try {
+        await activate(wallet)
+      } catch (e) {
+        console.log(e)
+      }
+    }
+  }
+
+  const deactivateWallet = async () => {
+    try {
+      deactivate()
+    } catch (ex) {
+      console.log(ex)
+    }
   }
 
   return (<div className="py-10 flex justify-between flex-col-reverse md:flex-row">
@@ -75,7 +107,10 @@ export const ClientHeader = () => {
       <span className="text-4xl">{navigation.title}</span>
     </div>
     <div className="flex items-center justify-between md:justify-end pr-4 mb-6 md:mb-0">
-      <LNButton style="outlined" title="Connect Wallet" className="mr-6 uppercase" onClick={() => {setIsConnectModalOpen(!isConnectModalOpen)}}/>
+      {!active ?
+        <LNButton style="outlined" title="Connect Wallet" className="mr-6 uppercase" onClick={onActivateWalletClicked}/> :
+        <LNButton style="outlined" title="Disconnect" className="mr-6 uppercase" onClick={deactivateWallet}/>
+      }
       <LNBadge text="">
         <FontAwesomeIcon className="text-white text-2xl hover:text-yellow hover:cursor-pointer duration-300" icon={faBell} />
       </LNBadge>
