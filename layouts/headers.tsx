@@ -21,6 +21,21 @@ import { Metamask } from "common/web3/connectors"
 export const AnonymousHeader = () => {
   const [open, setOpen] = useState<boolean>(false)
 
+  const onClickExternalLinks = (type: string) => {
+    const link = {
+      'REDDIT': 'https://www.reddit.com/r/Lightnode/',
+      'TWITTER': 'https://twitter.com/lightnode_us',
+      'GITHUB': 'https://github.com/LightNodeStaking',
+      'DISCORD': 'https://discord.gg/svZJ5KVDMt',
+      'TELEGRAM': 'ttps://t.me/lightnodechat',
+      'WHITEPAPER': '',
+    }[type]
+    setOpen(false)
+
+    // @ts-ignore
+    window.open(link, '_blank').focus()
+  }
+
   const NavItems = () => <Fragment>
     <a href="#about" className="header-link" onClick={() => setOpen(false)}>About</a>
     <a href="#services" className="header-link" onClick={() => setOpen(false)}>Services</a>
@@ -29,12 +44,12 @@ export const AnonymousHeader = () => {
   </Fragment>
 
   const NavSocialItems = () => <Fragment>
-    <FontAwesomeIcon className="header-social-icon" icon={faReddit} onClick={() => setOpen(false)} />
-    <FontAwesomeIcon className="header-social-icon" icon={faTelegram} onClick={() => setOpen(false)} />
-    <FontAwesomeIcon className="header-social-icon" icon={faDiscord} onClick={() => setOpen(false)} />
-    <FontAwesomeIcon className="header-social-icon" icon={faGithub} onClick={() => setOpen(false)} />
-    <FontAwesomeIcon className="header-social-icon" icon={faClipboard} onClick={() => setOpen(false)} />
-    <FontAwesomeIcon className="header-social-icon" icon={faTwitter} onClick={() => setOpen(false)} />
+    <FontAwesomeIcon className="header-social-icon" icon={faReddit} onClick={() => onClickExternalLinks('REDDIT')} />
+    <FontAwesomeIcon className="header-social-icon" icon={faTelegram} onClick={() => onClickExternalLinks('TELEGRAM')} />
+    <FontAwesomeIcon className="header-social-icon" icon={faDiscord} onClick={() => onClickExternalLinks('DISCORD')} />
+    <FontAwesomeIcon className="header-social-icon" icon={faGithub} onClick={() => onClickExternalLinks('GITHUB')} />
+    <FontAwesomeIcon className="header-social-icon" icon={faClipboard} onClick={() => onClickExternalLinks('WHITEPAPER')} />
+    <FontAwesomeIcon className="header-social-icon" icon={faTwitter} onClick={() => onClickExternalLinks('TWITTER')} />
   </Fragment>
 
   return (<div className="sticky top-0 z-20 bg-blue-800 grid grid-cols-1 lg:grid-cols-2 py-5 md:py-10 px-10 md:px-20">
