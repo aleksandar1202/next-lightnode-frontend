@@ -27,7 +27,7 @@ export const AnonymousHeader = () => {
       'TWITTER': 'https://twitter.com/lightnode_us',
       'GITHUB': 'https://github.com/LightNodeStaking',
       'DISCORD': 'https://discord.gg/svZJ5KVDMt',
-      'TELEGRAM': 'ttps://t.me/lightnodechat',
+      'TELEGRAM': 'https://t.me/lightnodechat',
       'WHITEPAPER': '',
     }[type]
     setOpen(false)
