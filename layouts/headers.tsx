@@ -28,7 +28,7 @@ export const AnonymousHeader = () => {
       'GITHUB': 'https://github.com/LightNodeStaking',
       'DISCORD': 'https://discord.gg/svZJ5KVDMt',
       'TELEGRAM': 'https://t.me/lightnodechat',
-      'WHITEPAPER': '',
+      'WHITEPAPER': '/assets/docs/whitepaper.pdf'
     }[type]
     setOpen(false)
 
