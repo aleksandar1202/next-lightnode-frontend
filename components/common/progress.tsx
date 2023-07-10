@@ -21,7 +21,7 @@ export const LNProgress = ({
     const bgColor = !variant ? '' : `bg-${ThemeVariantToColor[variant]}`
     const height = `p-${heights[size] / 4}`
     return `${bgColor} ${height} rounded-full duration-300 ${animation ? 'animate-grow-up': ''}`
-  }, [variant, size])
+  }, [variant, size, animation])
 
   const widthInPercentage = useMemo(() => `${percentage}%`, [percentage])
   
