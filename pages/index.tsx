@@ -52,9 +52,9 @@ const LandingPage: NextPage = () => {
       </section>
       <section id="validators" className="max-w-7xl mx-auto text-center mb-20 px-6">
         <p className="text-xl text-gray-light uppercase py-10">Validators</p>
-        <p className="text-lg text-gray">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+        {/* <p className="text-lg text-gray">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
         <p className="text-lg text-gray">eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
-        <p className="text-lg text-gray">non proident, sunt in culpa qui officia</p>
+        <p className="text-lg text-gray">non proident, sunt in culpa qui officia</p> */}
         <div className="flex my-32">
           {validators.map((v, vi) => <div key={vi} className="flex-1 flex items-center justify-center px-2">
             <div className={v.paddingClass}>

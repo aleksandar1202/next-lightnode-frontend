@@ -59,7 +59,7 @@ a {
 
 .header-social {
   &.mobile {
-    @apply block;
+    @apply block text-center;
 
     .header-social-icon {
       @apply text-3xl text-gray hover:text-yellow hover:cursor-pointer inline-block lg:hidden;
@@ -67,11 +67,7 @@ a {
   }
 
   .header-social-icon {
-    @apply text-3xl text-gray hover:text-yellow hover:cursor-pointer hidden lg:inline-block;
-
-    &:not(:last-child) {
-      @apply mr-8;
-    } 
+    @apply text-3xl text-gray hover:text-yellow hover:cursor-pointer hidden lg:inline-block mx-3;
   }
 }
 

@@ -7,7 +7,8 @@ import {
   faTelegram,
   faDiscord,
   faGithub,
-  faTwitter
+  faTwitter,
+  faMedium
 } from '@fortawesome/free-brands-svg-icons'
 import { faClipboard, faTimes, faBars, faBell } from '@fortawesome/free-solid-svg-icons'
 import { navigations } from 'common/constants/navigation'
@@ -28,7 +29,8 @@ export const AnonymousHeader = () => {
       'GITHUB': 'https://github.com/LightNodeStaking',
       'DISCORD': 'https://discord.gg/svZJ5KVDMt',
       'TELEGRAM': 'https://t.me/lightnodechat',
-      'WHITEPAPER': '/assets/docs/whitepaper.pdf'
+      'WHITEPAPER': '/assets/docs/whitepaper.pdf',
+      'MEDIUM': 'https://medium.com/@lightnode'
     }[type]
     setOpen(false)
 
@@ -50,6 +52,7 @@ export const AnonymousHeader = () => {
     <FontAwesomeIcon className="header-social-icon" icon={faGithub} onClick={() => onClickExternalLinks('GITHUB')} />
     <FontAwesomeIcon className="header-social-icon" icon={faClipboard} onClick={() => onClickExternalLinks('WHITEPAPER')} />
     <FontAwesomeIcon className="header-social-icon" icon={faTwitter} onClick={() => onClickExternalLinks('TWITTER')} />
+    <FontAwesomeIcon className="header-social-icon" icon={faMedium} onClick={() => onClickExternalLinks('MEDIUM')} />
   </Fragment>
 
   return (<div className="sticky top-0 z-20 bg-blue-800 grid grid-cols-1 lg:grid-cols-2 py-5 md:py-10 px-10 md:px-20">
