@@ -1,4 +1,4 @@
-export const LightNodeABI = [
+export default [
   {
     inputs: [
       {
