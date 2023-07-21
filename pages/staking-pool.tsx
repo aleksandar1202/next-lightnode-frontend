@@ -55,7 +55,16 @@ const StakingPoolPage: NextPage = () => {
   };
 
   const onChangeAmount = (value: string) => {
-    setAmount(value.split(/ /)[0].replace(/[^\d.]/g, ""));
+    let newAmount: string[] | string = value
+      .split(/ /)[0]
+      .replace(/[^\d.]/g, "")
+      .split(".");
+    if (newAmount.length > 1) {
+      newAmount = newAmount.shift() + "." + newAmount.join("");
+    } else {
+      newAmount = newAmount[0] as string;
+    }
+    setAmount(newAmount);
   };
 
   const onClickSubmit = async () => {
@@ -71,7 +80,9 @@ const StakingPoolPage: NextPage = () => {
     );
 
     if (balance.lt(ethers.utils.parseEther(`${parseFloat(amount)}`))) {
-      toast("Insufficient Balance");
+      toast.error(
+        "Insufficient Balance. Please check your ETH balance and try again."
+      );
       return;
     }
     const lightNodeContract = new ethers.Contract(
@@ -95,7 +106,7 @@ const StakingPoolPage: NextPage = () => {
         closeOnClick
         hideProgressBar
         pauseOnHover
-        autoClose={2000}
+        autoClose={3000}
         theme="dark"
       />
       <div id="staking-pool" className="pb-4">
@@ -252,7 +263,7 @@ const StakingPoolPage: NextPage = () => {
                   size="large"
                   className="ml-4 grow"
                   value={amount}
-                  suffix="You will receive: 0.00 stETH"
+                  suffix={`You will receive: ${parseFloat(amount) || 0} stETH`}
                   onChange={(v: string) => onChangeAmount(v)}
                   placeHolder="Enter amount"
                 />
