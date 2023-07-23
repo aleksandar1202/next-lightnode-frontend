@@ -1,8 +1,8 @@
-import { combineReducers } from 'redux'
-import walletReducer from './wallets-reducer'
+import { combineReducers } from "redux";
+import walletReducer from "./wallets-reducer";
 
 const rootReducer = combineReducers({
-    walletReducer,
-})
+  walletReducer,
+});
 
-export default rootReducer
+export default rootReducer;

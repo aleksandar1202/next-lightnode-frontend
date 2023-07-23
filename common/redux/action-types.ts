@@ -1,1 +1,1 @@
-export const UPDATE_WALLET = 'UPDATE-WALLET'
+export const UPDATE_WALLET = "UPDATE-WALLET";

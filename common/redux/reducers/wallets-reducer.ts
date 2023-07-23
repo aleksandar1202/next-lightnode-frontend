@@ -1,21 +1,21 @@
-import { UPDATE_WALLET } from '../action-types'
+import { UPDATE_WALLET } from "../action-types";
 
 const initState = {
-  address: null
-}
+  address: null,
+};
 
 interface Action {
   type: string;
   payload: any;
 }
 
-const walletReducer = (state: Object = initState, action: Action) =>{
+const walletReducer = (state: Object = initState, action: Action) => {
   switch (action.type) {
     case UPDATE_WALLET:
-      return { ...state, address: action.payload.address }
+      return { ...state, address: action.payload.address };
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default walletReducer
+export default walletReducer;
