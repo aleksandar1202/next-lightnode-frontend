@@ -21,4 +21,7 @@ export type Environment = "development" | "production";
 export type Network = "goerli" | "ethereum";
 export interface ContractAddresses {
   LightNode: string;
+  UniswapV3Factory: string;
+  UniswapV3Router?: string;
+  UniswapV3Pool?: string;
 }

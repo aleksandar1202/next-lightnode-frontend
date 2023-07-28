@@ -32,7 +32,7 @@ export const AnonymousHeader = () => {
     const link = {
       REDDIT: "https://www.reddit.com/r/Lightnode/",
       TWITTER: "https://twitter.com/lightnode_us",
-      GITHUB: "https://github.com/LightNodeStaking",
+      GITHUB: "https://github.com",
       DISCORD: "https://discord.gg/svZJ5KVDMt",
       TELEGRAM: "https://t.me/lightnodechat",
       WHITEPAPER: "/assets/docs/whitepaper.pdf",
